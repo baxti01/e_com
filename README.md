@@ -12,7 +12,12 @@
 - Docker
 
 
-#### Запускаем проект на компьютере
+### Запускаем проект.
+
+Клонируем проект себе с помощью гит.
+```
+git clone https://github.com/baxti01/e_com.git
+```
 Устанавливаем зависимости.
 ```
 pip install -r requirements.txt
