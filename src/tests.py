@@ -7,6 +7,9 @@ from httpx import AsyncClient
 from src.app import app
 
 
+filed_name_id = time.time()
+
+
 @pytest.fixture(scope='session')
 def event_loop():
     """Create an instance of the default event loop for each test case."""
@@ -93,13 +96,13 @@ async def test_get_form(
     [
         (
                 {
-                    'template_name': f'Field form{time.time()}',
+                    'template_name': f'Field form{filed_name_id}',
                     'f_name': 'field name',
                     'f_phone': '+7 123321 1222',
                     'f_email': 'email@gamil.com'
                 },
                 {
-                    'template_name': f'Field form{time.time()}',
+                    'template_name': f'Field form{filed_name_id}',
                     'f_name': 'str',
                     'f_phone': 'phone',
                     'f_email': 'email'
